@@ -16,10 +16,17 @@ namespace Meetup.Controllers
 {
     public class MeetupController : TwilioController
     {
+        public ActionResult
         // GET: Meetup
-        public ActionResult SendSms()
+        public ActionResult InitialSMS()
         {
-            
+            var accountSid = AC5b3938e45c472021784a748f81ca2d0b;
+            var authToken = 2545231d0b7575a9d1f7a3d476286b51;
+            TwilioClient.Init(accountSid, authToken);
+
+            var to = new PhoneNumber("+18582078685");
+            var from = new PhoneNumber("+6193041784");
+
         }
     }
 }
